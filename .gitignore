@@ -1,0 +1,11 @@
+*.local
+.DS_Store
+.eslintcache
+.env
+.next
+.yarn-debug.log*
+cache
+coverage
+dist
+node_modules
+tsconfig.tsbuildinfo

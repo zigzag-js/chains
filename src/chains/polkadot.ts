@@ -1,0 +1,48 @@
+import { Chain } from "../types/chain";
+
+export const polkadot: Chain = {
+  id: 0,
+  name: "Polkadot",
+  network: "polkadot",
+  relay: true,
+  prefix: 0,
+  account_sign_type: "sr25519",
+  website: "https://polkadot.network/",
+  currency: {
+    name: "Polkadot",
+    symbol: "DOT",
+    decimals: 10,
+  },
+  rpc: {
+    default: "wss://rpc.polkadot.io",
+    automata_1rpc: "wss://1rpc.io/dot",
+    dwellir: "wss://polkadot-rpc.dwellir.com",
+    dwellir_tunisia: "wss://polkadot-rpc-tn.dwellir.com",
+    ibp_geodns1: "wss://rpc.ibp.network/polkadot",
+    ibp_geodns2: "wss://rpc.dotters.network/polkadot",
+    onfinality: "wss://polkadot.api.onfinality.io/public-ws",
+    parity: "wss://rpc.polkadot.io",
+    radiumblock: "wss://polkadot.public.curie.radiumblock.co/ws",
+  },
+  light: {
+    default: "light://substrate-connect/polkadot",
+  },
+  block_explorers: {
+    default: {
+      name: "Polkascan",
+      url: "https://polkascan.io/polkadot",
+    },
+  },
+};
+
+/*
+'Automata 1RPC': 'wss://1rpc.io/dot',
+    Dwellir: 'wss://polkadot-rpc.dwellir.com',
+    'Dwellir Tunisia': 'wss://polkadot-rpc-tn.dwellir.com',
+    'IBP-GeoDNS1': 'wss://rpc.ibp.network/polkadot',
+    'IBP-GeoDNS2': 'wss://rpc.dotters.network/polkadot',
+    OnFinality: 'wss://polkadot.api.onfinality.io/public-ws',
+    Parity: 'wss://rpc.polkadot.io',
+    RadiumBlock: 'wss://polkadot.public.curie.radiumblock.co/ws',
+    'light client': 'light://substrate-connect/polkadot'
+*/
