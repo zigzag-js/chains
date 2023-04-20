@@ -13,7 +13,7 @@
   "homepage": "https://github.com/zigzag-js/chains#readme",
   "author": "https://github.com/itsyogesh",
   "license": "MIT",
-  "private": true,
+  "private": false,
   
   "scripts": {
     "build": "rollup -c",
