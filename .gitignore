@@ -4,6 +4,7 @@
 .env
 .next
 .yarn-debug.log*
+.npmrc
 cache
 coverage
 dist

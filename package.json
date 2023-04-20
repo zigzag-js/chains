@@ -1,6 +1,6 @@
 {
   "name": "@zigzag/chains",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A quick way to get details for all the chains in the Dotsama ecosystem.",
   "main": "dist/index.js",
   "repository": {
