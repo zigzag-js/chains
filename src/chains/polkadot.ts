@@ -34,15 +34,3 @@ export const polkadot: Chain = {
     },
   },
 };
-
-/*
-'Automata 1RPC': 'wss://1rpc.io/dot',
-    Dwellir: 'wss://polkadot-rpc.dwellir.com',
-    'Dwellir Tunisia': 'wss://polkadot-rpc-tn.dwellir.com',
-    'IBP-GeoDNS1': 'wss://rpc.ibp.network/polkadot',
-    'IBP-GeoDNS2': 'wss://rpc.dotters.network/polkadot',
-    OnFinality: 'wss://polkadot.api.onfinality.io/public-ws',
-    Parity: 'wss://rpc.polkadot.io',
-    RadiumBlock: 'wss://polkadot.public.curie.radiumblock.co/ws',
-    'light client': 'light://substrate-connect/polkadot'
-*/
