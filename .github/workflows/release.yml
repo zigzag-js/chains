@@ -1,4 +1,10 @@
 name: release
+on:
+  push:
+    branches:
+      - master
+  release:
+    types: [created]
 
 on:
   release:
@@ -15,6 +21,6 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           scope: "@zig-zag"
       - run: yarn
-      - run: yarn publish
+      - run: yarn publish --access public
         env:
           NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
