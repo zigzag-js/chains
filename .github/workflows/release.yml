@@ -16,6 +16,7 @@ jobs:
           node-version: 16.x
           registry-url: "https://registry.npmjs.org"
           scope: "@zig-zag"
+          always-auth: true
       - run: yarn
       - run: yarn publish --access public
         env:

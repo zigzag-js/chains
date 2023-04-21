@@ -1,7 +1,7 @@
 import { Chain } from "../types/chain";
 
-export const astar: Chain = {
-  id: 5,
+export const astar = {
+  id: 52006,
   name: "Astar",
   network: "astar",
   para_id: 2006,
@@ -32,4 +32,4 @@ export const astar: Chain = {
       url: "https://astar.network",
     },
   },
-};
+} as const satisfies Chain;

@@ -1,7 +1,7 @@
 import { Chain } from "../types/chain";
 
-export const acala: Chain = {
-  id: 10,
+export const acala = {
+  id: 102000,
   name: "Acala",
   network: "acala",
   para_id: 2000,
@@ -33,4 +33,4 @@ export const acala: Chain = {
       url: "https://acala.subscan.io/",
     },
   },
-};
+} as const satisfies Chain;

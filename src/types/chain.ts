@@ -6,8 +6,6 @@ export type Chain = {
   id: number;
   /** Human-readable name */
   name: string;
-  /** Parachain id for the network */
-  para_id?: number;
   /** Address Prefix. Must be a unique and an integer */
   prefix: number;
   /** Unique identifier for the network */
@@ -16,6 +14,15 @@ export type Chain = {
   currency: Currency;
   /** Signing curve for standard account. Substrate supports ed25519, sr25519, and secp256k1. */
   account_sign_type: string;
+  /** A website or Github repo associated with the network. */
+  website: string;
+  /** Collection of rpc providers for the network */
+  rpc: {
+    [key: string]: string;
+    default: string;
+  };
+  /** Parachain id for the network */
+  para_id?: number;
   /** Flag for test networks */
   testnet?: boolean;
   /** Flag for relay chains */
@@ -24,20 +31,13 @@ export type Chain = {
   ethereum?: boolean;
   /** network name of the relay chain (if parachain) */
   relay_chain?: string;
-  /** A website or Github repo associated with the network. */
-  website: string;
-  /** Collection of rpc providers for the network */
-  rpc: {
-    [key: string]: string;
-    default: string;
-  };
   /** Collection of light clients for the network */
-  light: {
+  light?: {
     [key: string]: string;
     default: string;
   };
   /** Collection of block explorers for the network */
-  block_explorers: {
+  block_explorers?: {
     [key: string]: BlockExplorer;
     default: BlockExplorer;
   };

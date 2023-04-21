@@ -1,6 +1,6 @@
 import { Chain } from "../types/chain";
 
-export const kusama: Chain = {
+export const Kusama = {
   id: 2,
   name: "Kusama",
   network: "kusama",
@@ -33,4 +33,4 @@ export const kusama: Chain = {
       url: "https://polkascan.io/kusama",
     },
   },
-};
+} as const satisfies Chain;

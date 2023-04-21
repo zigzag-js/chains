@@ -1,6 +1,6 @@
 import { Chain } from "../types/chain";
 
-export const polkadot: Chain = {
+export const polkadot = {
   id: 0,
   name: "Polkadot",
   network: "polkadot",
@@ -33,4 +33,4 @@ export const polkadot: Chain = {
       url: "https://polkascan.io/polkadot",
     },
   },
-};
+} as const satisfies Chain;

@@ -20,7 +20,7 @@ npm i @zig-zag/chains
 
 `@zig-zag/chains` exports a list of all the chains in the Polkadot ecosystem. Each chain has all the necessary information to interact with the chain.
 
-> Encoding an address for a particular chain requires the prefix of the chain. You can find the prefix for a chain in the `prefix` property of the chain 🪄
+Encoding an address for a particular chain requires the prefix of the chain. You can find the prefix for a chain in the `prefix` property of the chain 🪄
 
 ```ts
 import { astar } from '@zig-zag/chains'
@@ -73,6 +73,6 @@ Want to add another chain to the list? Make sure you read the [contributing guid
 ## References
 The info for the chains is taken from the following sources:
 
- - [ss58-registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json
+ - ss58-registry - [ss58-registry](https://github.com/paritytech/ss58-registry/blob/main/ss58-registry.json)
  - Polkadot Parachains - [@polkadot/apps-config](https://github.com/polkadot-js/apps/blob/ca8f445a22df131bd6743e90b7f1bc305e3e6266/packages/apps-config/src/endpoints/productionRelayPolkadot.ts)
- - Kusama Parachains - [@polkadot/apps-config](https://github.com/polkadot-js/apps/blob/ca8f445a22df131bd6743e90b7f1bc305e3e6266/packages/apps-config/src/endpoints/productionRelayKusama.ts]
+ - Kusama Parachains - [@polkadot/apps-config](https://github.com/polkadot-js/apps/blob/ca8f445a22df131bd6743e90b7f1bc305e3e6266/packages/apps-config/src/endpoints/productionRelayKusama.ts)
