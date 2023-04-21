@@ -1,7 +1,7 @@
 {
   "name": "@zig-zag/chains",
-  "version": "0.1.7",
-  "description": "A quick way to get details for all the chains in the Dotsama ecosystem.",
+  "version": "0.1.8",
+  "description": "A reference list for all popular Dotsama relay/parachains.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -14,7 +14,6 @@
   "author": "https://github.com/itsyogesh",
   "license": "MIT",
   "private": false,
-  
   "scripts": {
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly",
@@ -24,7 +23,6 @@
     "build:types:watch": "tsc --emitDeclarationOnly --watch",
     "build:watch": "rollup -c -w"
   },
-  
   "type": "module",
   "exports": {
     ".": {
@@ -34,7 +32,6 @@
     },
     "./package.json": "./package.json"
   },
-
   "devDependencies": {
     "@types/node": "^18.15.12",
     "esbuild": "^0.17.17",
