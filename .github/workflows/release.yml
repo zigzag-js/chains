@@ -2,24 +2,19 @@ name: release
 
 on:
   release:
-    types: [published]
+    types: [created]
+
 jobs:
-  build:
+  publish-github-registry:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-          registry-url: "https://npm.pkg.github.com"
-          # Defaults to the user or organization that owns the workflow file
-          scope: "@zigzag"
-      - run: yarn install
-      - run: yarn build
-      - run: yarn publish --access public
+          node-version: 16.x
+          registry-url: "https://registry.npmjs.org"
+          scope: "@zig-zag"
+      - run: yarn
+      - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
