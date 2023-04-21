@@ -1,6 +1,6 @@
 import { Chain } from "../types/chain";
 
-export const Kusama = {
+export const kusama = {
   id: 2,
   name: "Kusama",
   network: "kusama",
