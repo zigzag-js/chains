@@ -10,6 +10,7 @@ Works with [Dedot](https://github.com/dedotdev/dedot), [PAPI](https://github.com
 - [Quick Start](#quick-start)
 - [Supported Chains](#supported-chains)
 - [Chain Data Model](#chain-data-model)
+- [Utilities](#utilities)
 - [Usage Examples](#usage-examples)
 - [TypeScript Support](#typescript-support)
 - [Project Structure](#project-structure)
@@ -154,6 +155,55 @@ polkadot.rpcUrls.radiumblock;  // 'wss://polkadot.public.curie.radiumblock.co/ws
 
 Relay chains have 9+ named providers. System parachains and third-party chains have 3-7 each.
 
+## Utilities
+
+### Chain Groups
+
+Pre-built arrays for common filtering needs:
+
+```typescript
+import {
+  allChains,       // All 20 chains
+  relayChains,     // Polkadot, Kusama, Westend, Paseo
+  systemChains,    // Asset Hub, People, Coretime, Collectives, Bridge Hub
+  parachainChains, // Astar, Acala, Moonbeam, Phala, Hydration
+  testnetChains,   // Westend, Paseo, Westend Asset Hub, Paseo Asset Hub
+  mainnetChains,   // Everything except testnets
+} from "@zig-zag/chains";
+```
+
+### Lookup Helpers
+
+Find chains by ID, network slug, or genesis hash:
+
+```typescript
+import { getChainById, getChainByNetwork, getChainByGenesisHash } from "@zig-zag/chains";
+
+const dot = getChainById(0);                // polkadot
+const ksm = getChainByNetwork("kusama");    // kusama
+const chain = getChainByGenesisHash("0x91b171bb...");  // polkadot
+```
+
+All lookups return `Chain | undefined`.
+
+### Define Custom Chains
+
+Use `defineChain` to create chain objects that satisfy the `Chain` interface with full type inference:
+
+```typescript
+import { defineChain } from "@zig-zag/chains";
+
+const myChain = defineChain({
+  id: 99999,
+  name: "My Chain",
+  network: "my-chain",
+  genesisHash: "0xabcdef...",
+  ss58Format: 42,
+  nativeCurrency: { name: "My Token", symbol: "MYT", decimals: 12 },
+  rpcUrls: { default: "wss://rpc.my-chain.io" },
+});
+```
+
 ## Usage Examples
 
 ### With Dedot
@@ -189,22 +239,6 @@ const astarAddress = encodeAddress(
   "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
   astar.ss58Format
 );
-```
-
-### Filtering Chains
-
-```typescript
-import * as chains from "@zig-zag/chains";
-import type { Chain } from "@zig-zag/chains";
-
-const allChains = Object.values(chains).filter(
-  (v): v is Chain => typeof v === "object" && v !== null && "genesisHash" in v
-);
-
-const relayChains = allChains.filter((c) => c.relay);
-const testnets = allChains.filter((c) => c.testnet);
-const polkadotParachains = allChains.filter((c) => c.relayChain === "polkadot");
-const evmChains = allChains.filter((c) => c.ethereum);
 ```
 
 ### Subscan API

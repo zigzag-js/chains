@@ -1,6 +1,20 @@
 // Types
 export type { Chain, HexString, BlockExplorer, Currency, SubscanConfig } from "./types/chain";
 
+// Utilities and chain groups
+export {
+  allChains,
+  relayChains,
+  systemChains,
+  parachainChains,
+  testnetChains,
+  mainnetChains,
+  getChainById,
+  getChainByNetwork,
+  getChainByGenesisHash,
+  defineChain,
+} from "./utils";
+
 // Relay chains
 export { polkadot } from "./chains/relay/polkadot";
 export { kusama } from "./chains/relay/kusama";
