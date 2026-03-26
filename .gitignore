@@ -4,9 +4,9 @@
 .env
 .next
 .yarn-debug.log*
-.npmrc
 cache
 coverage
 dist
 node_modules
 tsconfig.tsbuildinfo
+package-lock.json

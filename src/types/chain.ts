@@ -1,44 +1,73 @@
-import BlockExplorer from "./block-explorer";
-import Currency from "./currency";
+export type HexString = `0x${string}`;
 
-export type Chain = {
-  /** Unique id of the chain */
+export interface BlockExplorer {
+  name: string;
+  url: string;
+}
+
+export interface Currency {
+  name: string;
+  /** 2-6 characters long */
+  symbol: string;
+  decimals: number;
+}
+
+export interface SubscanConfig {
+  /** Subscan web URL (e.g., "https://polkadot.subscan.io") */
+  url: string;
+  /** Subscan API URL (e.g., "https://polkadot.api.subscan.io") */
+  api: string;
+}
+
+export interface Chain {
+  /** Unique numeric chain id */
   id: number;
   /** Human-readable name */
   name: string;
-  /** Address Prefix. Must be a unique and an integer */
-  prefix: number;
-  /** Unique identifier for the network */
+  /** Unique slug identifier for the network (e.g., "polkadot", "kusama") */
   network: string;
-  /** Currency for the network */
-  currency: Currency;
-  /** Signing curve for standard account. Substrate supports ed25519, sr25519, and secp256k1. */
-  account_sign_type: string;
-  /** A website or Github repo associated with the network. */
-  website: string;
-  /** Collection of rpc providers for the network */
-  rpc: {
-    [key: string]: string;
-    default: string;
-  };
-  /** Parachain id for the network */
-  para_id?: number;
-  /** Flag for test networks */
-  testnet?: boolean;
-  /** Flag for relay chains */
+  /** Genesis block hash — primary on-chain identifier */
+  genesisHash: HexString;
+
+  // --- Network topology ---
+
+  /** SS58 address prefix */
+  ss58Format: number;
+  /** Parachain id on the relay chain */
+  paraId?: number;
+  /** Whether this is a relay chain */
   relay?: boolean;
-  /** Flag for ethereum based chains */
+  /** Whether this is a test network */
+  testnet?: boolean;
+  /** Whether this chain is Ethereum-compatible (EVM) */
   ethereum?: boolean;
-  /** network name of the relay chain (if parachain) */
-  relay_chain?: string;
-  /** Collection of light clients for the network */
-  light?: {
-    [key: string]: string;
-    default: string;
-  };
-  /** Collection of block explorers for the network */
-  block_explorers?: {
-    [key: string]: BlockExplorer;
-    default: BlockExplorer;
-  };
-};
+  /** Network slug of the parent relay chain (for parachains) */
+  relayChain?: string;
+
+  // --- Currency ---
+
+  /** Native currency details */
+  nativeCurrency: Currency;
+  /** Default signing curve for standard accounts */
+  signType?: "sr25519" | "ed25519" | "secp256k1";
+
+  // --- Connectivity ---
+
+  /** Named WebSocket RPC providers — keys are provider names, "default" is required */
+  rpcUrls: Record<string, string> & { default: string };
+  /** Named HTTP RPC endpoints (optional) */
+  httpUrls?: Record<string, string>;
+  /** Light client connection strings (substrate-connect) */
+  lightClientUrls?: Record<string, string> & { default: string };
+
+  // --- Metadata ---
+
+  /** Project website URL */
+  website?: string;
+  /** Chain logo URL or data URI */
+  chainIconUrl?: string;
+  /** Named block explorers — "default" is the primary */
+  blockExplorers?: Record<string, BlockExplorer> & { default: BlockExplorer };
+  /** Subscan integration URLs */
+  subscan?: SubscanConfig;
+}
