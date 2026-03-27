@@ -86,6 +86,11 @@ describe("@zig-zag/chains", () => {
         expect(chain.paraId).toBeUndefined();
       });
     }
+
+    it("should have a chainIconUrl", () => {
+      expect(chain.chainIconUrl).toBeDefined();
+      expect(chain.chainIconUrl).toMatch(/^data:image\/svg\+xml;base64,/);
+    });
   });
 
   describe("Uniqueness constraints", () => {

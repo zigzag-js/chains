@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { westendAssetHubLogo } from "../../logos/generated";
 
 export const westendAssetHub = {
   id: 421000,
@@ -12,6 +13,7 @@ export const westendAssetHub = {
   testnet: true,
   signType: "sr25519",
   nativeCurrency: { name: "Westend", symbol: "WND", decimals: 12 },
+  chainIconUrl: westendAssetHubLogo,
   rpcUrls: {
     default: "wss://westend-asset-hub-rpc.polkadot.io",
     dwellir: "wss://asset-hub-westend-rpc.n.dwellir.com",

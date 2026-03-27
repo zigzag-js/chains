@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { polkadotCollectivesLogo } from "../../logos/generated";
 
 export const polkadotCollectives = {
   id: 1001,
@@ -11,6 +12,7 @@ export const polkadotCollectives = {
   relayChain: "polkadot",
   signType: "sr25519",
   nativeCurrency: { name: "Polkadot", symbol: "DOT", decimals: 10 },
+  chainIconUrl: polkadotCollectivesLogo,
   rpcUrls: {
     default: "wss://polkadot-collectives-rpc.polkadot.io",
     dwellir: "wss://collectives-polkadot-rpc.n.dwellir.com",

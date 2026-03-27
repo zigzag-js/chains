@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { polkadotLogo } from "../../logos/generated";
 
 export const polkadot = {
   id: 0,
@@ -10,6 +11,7 @@ export const polkadot = {
   signType: "sr25519",
   nativeCurrency: { name: "Polkadot", symbol: "DOT", decimals: 10 },
   website: "https://polkadot.network/",
+  chainIconUrl: polkadotLogo,
   rpcUrls: {
     default: "wss://rpc.polkadot.io",
     parity: "wss://rpc.polkadot.io",

@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { polkadotCoretimeLogo } from "../../logos/generated";
 
 export const polkadotCoretime = {
   id: 1005,
@@ -11,6 +12,7 @@ export const polkadotCoretime = {
   relayChain: "polkadot",
   signType: "sr25519",
   nativeCurrency: { name: "Polkadot", symbol: "DOT", decimals: 10 },
+  chainIconUrl: polkadotCoretimeLogo,
   rpcUrls: {
     default: "wss://polkadot-coretime-rpc.polkadot.io",
     dwellir: "wss://coretime-polkadot-rpc.n.dwellir.com",

@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { astarLogo } from "../../logos/generated";
 
 export const astar = {
   id: 52006,
@@ -12,6 +13,7 @@ export const astar = {
   signType: "sr25519",
   nativeCurrency: { name: "Astar", symbol: "ASTR", decimals: 18 },
   website: "https://astar.network",
+  chainIconUrl: astarLogo,
   rpcUrls: {
     default: "wss://rpc.astar.network",
     dwellir: "wss://astar-rpc.n.dwellir.com",

@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { kusamaLogo } from "../../logos/generated";
 
 export const kusama = {
   id: 2,
@@ -10,6 +11,7 @@ export const kusama = {
   signType: "sr25519",
   nativeCurrency: { name: "Kusama", symbol: "KSM", decimals: 12 },
   website: "https://kusama.network/",
+  chainIconUrl: kusamaLogo,
   rpcUrls: {
     default: "wss://kusama-rpc.polkadot.io",
     parity: "wss://kusama-rpc.polkadot.io",

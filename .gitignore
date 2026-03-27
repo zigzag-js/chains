@@ -1,5 +1,6 @@
 *.local
 .DS_Store
+CLAUDE.md
 .eslintcache
 .env
 .next

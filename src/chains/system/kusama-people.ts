@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { kusamaPeopleLogo } from "../../logos/generated";
 
 export const kusamaPeople = {
   id: 21004,
@@ -11,6 +12,7 @@ export const kusamaPeople = {
   relayChain: "kusama",
   signType: "sr25519",
   nativeCurrency: { name: "Kusama", symbol: "KSM", decimals: 12 },
+  chainIconUrl: kusamaPeopleLogo,
   rpcUrls: {
     default: "wss://kusama-people-rpc.polkadot.io",
     dwellir: "wss://people-kusama-rpc.n.dwellir.com",

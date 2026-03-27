@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { paseoLogo } from "../../logos/generated";
 
 export const paseo = {
   id: 77,
@@ -11,6 +12,7 @@ export const paseo = {
   testnet: true,
   signType: "sr25519",
   nativeCurrency: { name: "Paseo", symbol: "PAS", decimals: 10 },
+  chainIconUrl: paseoLogo,
   rpcUrls: {
     default: "wss://paseo-rpc.n.dwellir.com",
     amforc: "wss://paseo.rpc.amforc.com",

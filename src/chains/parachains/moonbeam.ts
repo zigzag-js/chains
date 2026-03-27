@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { moonbeamLogo } from "../../logos/generated";
 
 export const moonbeam = {
   id: 52004,
@@ -13,6 +14,7 @@ export const moonbeam = {
   ethereum: true,
   nativeCurrency: { name: "Glimmer", symbol: "GLMR", decimals: 18 },
   website: "https://moonbeam.network/",
+  chainIconUrl: moonbeamLogo,
   rpcUrls: {
     default: "wss://wss.api.moonbeam.network",
     allnodes: "wss://moonbeam-rpc.publicnode.com",

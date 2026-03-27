@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { phalaLogo } from "../../logos/generated";
 
 export const phala = {
   id: 52035,
@@ -12,6 +13,7 @@ export const phala = {
   signType: "sr25519",
   nativeCurrency: { name: "Phala", symbol: "PHA", decimals: 12 },
   website: "https://phala.network/",
+  chainIconUrl: phalaLogo,
   rpcUrls: {
     default: "wss://api.phala.network/ws",
     dwellir: "wss://phala-rpc.n.dwellir.com",

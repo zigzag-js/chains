@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { acalaLogo } from "../../logos/generated";
 
 export const acala = {
   id: 52000,
@@ -12,6 +13,7 @@ export const acala = {
   signType: "sr25519",
   nativeCurrency: { name: "Acala", symbol: "ACA", decimals: 12 },
   website: "https://acala.network/",
+  chainIconUrl: acalaLogo,
   rpcUrls: {
     default: "wss://acala-rpc-0.aca-api.network",
     acala1: "wss://acala-rpc-1.aca-api.network",

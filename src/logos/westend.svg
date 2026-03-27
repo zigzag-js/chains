@@ -1,0 +1,16 @@
+<svg viewBox="0 0 1672 1672" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="836.274" cy="836.219" r="835.436" fill="#E6007A"/>
+    <mask id="a" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="1672">
+        <circle cx="836.274" cy="836.219" r="835.436" fill="#C4C4C4"/>
+    </mask>
+    <g mask="url(#a)">
+        <path fill="url(#b)" d="M-299.919-66.052h2840.48v1871.38h-2840.48z"/>
+    </g>
+    <path d="M579.661 1151h171.166l54.571-197.882c7.525-27.285 45.892-27.268 53.393.023L913.173 1151h170.837L1215 645h-160.39l-40.96 200.811c-5.95 29.161-46.969 29.967-54.04 1.061L910.233 645H753.767l-48.102 203.126c-6.868 29.002-47.975 28.44-54.062-.739l-14.445-69.249C620.973 700.547 553.102 645 474.48 645H449l130.661 506Z" fill="#fff"/>
+    <defs>
+        <linearGradient id="b" x1="-232.429" y1="816.169" x2="2713.69" y2="813.592" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F79420" stop-opacity=".92"/>
+            <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+</svg>

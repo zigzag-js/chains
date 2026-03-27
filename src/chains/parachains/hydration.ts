@@ -1,4 +1,5 @@
 import type { Chain } from "../../types/chain";
+import { hydrationLogo } from "../../logos/generated";
 
 export const hydration = {
   id: 52034,
@@ -12,6 +13,7 @@ export const hydration = {
   signType: "sr25519",
   nativeCurrency: { name: "Hydration", symbol: "HDX", decimals: 12 },
   website: "https://hydration.net/",
+  chainIconUrl: hydrationLogo,
   rpcUrls: {
     default: "wss://rpc.hydradx.cloud",
     dwellir: "wss://hydration-rpc.n.dwellir.com",
