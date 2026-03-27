@@ -53,6 +53,9 @@ console.log(polkadot.nativeCurrency);
 // Check the network topology
 console.log(polkadotAssetHub.paraId);      // 1000
 console.log(polkadotAssetHub.relayChain);  // 'polkadot'
+
+// Chain logos (base64 SVG data URIs)
+console.log(polkadot.chainIconUrl);        // 'data:image/svg+xml;base64,...'
 ```
 
 ## Supported Chains
