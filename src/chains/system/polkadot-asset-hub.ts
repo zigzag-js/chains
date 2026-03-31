@@ -25,6 +25,7 @@ export const polkadotAssetHub = {
   httpUrls: {
     parity: "https://polkadot-asset-hub-rpc.polkadot.io",
     dwellir: "https://asset-hub-polkadot-rpc.n.dwellir.com",
+    deserve: "https://asset-hub.polkadot.rpc.deserve.network",
   },
   blockExplorers: {
     default: { name: "Subscan", url: "https://assethub-polkadot.subscan.io" },
