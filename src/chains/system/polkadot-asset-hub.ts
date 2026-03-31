@@ -20,6 +20,7 @@ export const polkadotAssetHub = {
     ibp2: "wss://asset-hub-polkadot.dotters.network",
     onfinality: "wss://statemint.api.onfinality.io/public-ws",
     luckyfriday: "wss://rpc-asset-hub-polkadot.luckyfriday.io",
+    deserve: "wss://asset-hub.polkadot.rpc.deserve.network",
   },
   httpUrls: {
     parity: "https://polkadot-asset-hub-rpc.polkadot.io",
